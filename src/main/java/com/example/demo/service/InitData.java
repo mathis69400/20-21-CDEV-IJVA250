@@ -38,8 +38,24 @@ public class InitData implements ApplicationListener<ApplicationReadyEvent> {
         Client client2 = newClient("Brunet", "Valérie", LocalDate.of(1997, 6, 11));
         em.persist(client2);
 
-        Client client3 = newClient("Hardy", "Thierry-Eugène", LocalDate.of(1996, 5, 14));
-        em.persist(client3);
+        em.persist(newClient("Hardy", "Thierry-Eugène", LocalDate.of(1996, 5, 14)));
+        em.persist(newClient("ABSCHEN", "Jean", LocalDate.of(1996, 5, 14)));
+        em.persist(newClient("ADAMO", "Stéphane", LocalDate.of(19876, 5, 14)));
+        em.persist(newClient("AMELLAL", "Viviane", LocalDate.of(1996, 5, 14)));
+        em.persist(newClient("ANGONIN", "Jean-Pierre", LocalDate.of(1991, 5, 14)));
+        em.persist(newClient("AZOURA", "Marie-France", LocalDate.of(1996, 5, 14)));
+        em.persist(newClient("AZRIA", "Maryse", LocalDate.of(1996, 1, 14)));
+        em.persist(newClient("BACH", "Sylvie", LocalDate.of(1996, 5, 14)));
+        em.persist(newClient("BARNAUD", "Janine", LocalDate.of(1993, 5, 14)));
+        em.persist(newClient("BENSIMHON", "Pascal", LocalDate.of(1996, 5, 24)));
+        em.persist(newClient("BERTRAND", "Roger", LocalDate.of(1996, 5, 14)));
+        em.persist(newClient("BIDAULT", "Marie-Reine", LocalDate.of(1991, 5, 14)));
+        em.persist(newClient("BINET", "Emmanuel", LocalDate.of(1990, 5, 18)));
+        em.persist(newClient("BLANC", "Giséle", LocalDate.of(1999, 1, 14)));
+        em.persist(newClient("BLANCHOT", "Guy", LocalDate.of(1996, 1, 17)));
+        em.persist(newClient("BOUCHET", "Micheline", LocalDate.of(1996, 5, 14)));
+        em.persist(newClient("BOUDART", "Orianne", LocalDate.of(1993, 5, 15)));
+        em.persist(newClient("BOULLICAUD", "Paul", LocalDate.of(1995, 5, 14)));
 
         Article a1 = new Article();
         a1.setLibelle("Chargeurs de téléphones Portables");

@@ -3,8 +3,8 @@ package com.example.demo.controller;
 import com.example.demo.entity.Article;
 import com.example.demo.entity.Client;
 import com.example.demo.entity.Facture;
+import com.example.demo.service.impl.ClientServiceImpl;
 import com.example.demo.service.ArticleService;
-import com.example.demo.service.ClientService;
 import com.example.demo.service.FactureService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,12 +19,12 @@ import java.util.List;
 public class HomeController {
 
     private ArticleService articleService;
-    private ClientService clientService;
+    private ClientServiceImpl clientServiceImpl;
     private FactureService factureService;
 
-    public HomeController(ArticleService articleService, ClientService clientService, FactureService factureService) {
+    public HomeController(ArticleService articleService, ClientServiceImpl clientService, FactureService factureService) {
         this.articleService = articleService;
-        this.clientService = clientService;
+        this.clientServiceImpl = clientService;
         this.factureService = factureService;
     }
 
@@ -35,7 +35,7 @@ public class HomeController {
         List<Article> articles = articleService.findAll();
         modelAndView.addObject("articles", articles);
 
-        List<Client> toto = clientService.findAllClients();
+        List<Client> toto = clientServiceImpl.findAllClients();
         modelAndView.addObject("clients", toto);
 
         List<Facture> factures = factureService.findAllFactures();
